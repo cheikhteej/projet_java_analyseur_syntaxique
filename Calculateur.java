@@ -12,7 +12,8 @@ public class Calculateur {
     private Expression calculeExpression() throws IllegalArgumentException{
         Expression left = calculeTerme();
 
-        while(selecteur.hasNext() && (selecteur.select().equals("+") || selecteur.select().equals("-"))) {        
+        while(selecteur.hasNext() && 
+                (selecteur.select().equals("+") || selecteur.select().equals("-"))) {        
             String operateur = selecteur.next();
             Expression right = calculeTerme();        
             if(operateur.equals("+")){
